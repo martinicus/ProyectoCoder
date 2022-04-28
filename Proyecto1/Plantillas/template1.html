@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Estamos usando plantillas</h1>
+    <h2>esto es un subtitulo</h2>
+
+    <p style="color: red;">{{nombre}}</p>
+    <p style="color: red;">{{apellido}}</p>
+
+    <p style="color: blue;">La lista de notas del alumno es:</p>
+
+    {% for nota in lista  %}
+        {% if nota < 6 %}
+            <p style="color: red"> desaprobado: {{nota}} </p>
+        {% else %}
+            <p style="color: blue"> aprobado: {{nota}} </p>
+        {% endif %}
+      
+    {% endfor %}
+</body>
+</html>
